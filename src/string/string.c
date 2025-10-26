@@ -4,13 +4,21 @@
 
 char *strcpy(char *destination, const char *source)
 {
-	/* TODO: Implement strcpy(). */
+	while ((*destination++ = *source++) != '\0');
 	return destination;
 }
 
 char *strncpy(char *destination, const char *source, size_t len)
 {
-	/* TODO: Implement strncpy(). */
+	size_t i = 0;
+
+	for (i; i < len && source[i] != '\0'; ++i) {
+		destination[i] = source[i];
+	}
+
+	for (i; i < len; ++i) {
+		destination[i] = '\0';
+	}
 	return destination;
 }
 
