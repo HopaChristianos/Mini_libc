@@ -2,11 +2,11 @@
 #define _CUSTOM_TIME_H
 
 #include <internal/types.h>
-#include <stdint.h>
+//#include <stdint.h>
 
 struct timespec {
-	long long tv_sec;
-	long long tv_nsec;
+	size_t tv_sec;
+	size_t tv_nsec;
 };
 
 int nanosleep(const struct timespec *req, struct timespec *rem);
